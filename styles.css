@@ -24,7 +24,7 @@ padding-left: 40px;
 
 }
 
-.right {
+.right-about {
   padding-left: 50px;
 }
 
@@ -335,7 +335,9 @@ header{
 	position:relative;
 }
 
-
+hr {
+  opacity: 100 !important;
+}
 
 
 header  hr{
@@ -346,10 +348,12 @@ header  hr{
 	left: 0px;
 	width:100%;
 	margin:0;
+ 
 }
 header hr.right{
 	left:auto;
 	right:0px;
+
 }
 header  hr#thread1{
 	top: 0.8em;
@@ -357,6 +361,7 @@ header  hr#thread1{
   	-moz-animation:    thread2 10s infinite;
   	-o-animation:      thread2 10s infinite;
   	animation:         thread2 10s infinite;	
+
 }
 header hr#thread2{
 	top:1.8em;
@@ -364,16 +369,18 @@ header hr#thread2{
 	-webkit-animation: thread2 8s infinite;
   	-moz-animation:    thread2 8s infinite;
   	-o-animation:      thread2 8s infinite;
-  	animation:         thread2 8s infinite;	
+  	animation:         thread2 8s infinite;
+    right:0 !important;	
 }
 header hr#thread3{
 	top:2.8em;
-/* 	right:15px; */
+/* right:15px; */
 	border-color:var(--green);
 	-webkit-animation: thread2 6s infinite;
   	-moz-animation:    thread2 6s infinite;
   	-o-animation:      thread2 6s infinite;
-  	animation:         thread2 6s infinite;	
+  	animation:         thread2 6s infinite;
+  
 }
 header hr#thread4{
 	top:3.8em;
