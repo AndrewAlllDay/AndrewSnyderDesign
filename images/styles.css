@@ -1,0 +1,479 @@
+/*START GLOBAL STYLES*/
+:root {
+  --clr--active: seagreen;
+  --clr--hover: lightgreen;
+  --green: #71C562;
+  --white: #fff;
+  --black: #000;
+  --gray: #464646;
+  --light-gray: #7b7a7a;
+}
+
+* {margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 7rem;
+    font-weight: 400;
+    word-spacing: -30px;
+    letter-spacing: 4px;
+    
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+ul {list-style: none;}
+
+a {
+    text-decoration: none;
+    color:var(--black);}
+
+/*END GLOBAL STYLES*/
+
+/*START NAV STYLES*/
+
+nav {
+  height: 75px;
+  width: 100%;
+  background-color: var(--green);
+  display: flex;
+  justify-content: space-between;}
+  
+  #check {
+    display: none;
+  }
+  
+  #check:checked ~ .primary-menu {
+    height: 30vh;
+  }
+  
+  #check:checked ~ .primary-menu li {
+    display: block;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    color: white;}
+
+  .brand img {
+    width: 30%;
+    padding-left: 50px;}
+
+    nav h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-left: 2rem;
+    }
+  
+    @media only screen and (min-width: 600px) {
+      .brand img {
+        width: 20%;
+      }
+    }
+
+    @media only screen and (min-width: 400px) {
+      .brand img {
+        width: 20%;
+      }
+    }
+
+  
+  .hamburger-btn {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    float: right;
+    line-height: 75px;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+
+  .primary-menu {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    top: 75px;
+    text-align: left;
+    background: var(--light-gray);
+    list-style: none;}
+
+    li {
+      display: none;
+      line-height: 1.5;
+      transition: all 0.5s ease-out;
+      margin: 2rem;
+    }
+    
+    li a {
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-top: 4px solid transparent;
+      border-left: 4px solid transparent;
+      padding: 1rem 2rem;
+    }
+    
+    li a.active {
+      border-left: 4px solid var(--white);
+    }
+    
+    li a:hover,
+    li a:focus {
+      border-left: 4px solid var(--clr--hover);
+    }
+
+
+@media only screen and (min-width: 60rem) {
+   
+    .hamburger-btn {
+      display: none;
+    }
+
+    .primary-menu {
+      position: relative;
+      top: 0;
+      display: flex;
+      justify-content: flex-end;}
+      
+      li {
+        display: inline-flex;
+        margin: 0.5rem;
+      }
+      
+      li a.active {
+        border-top: 4px solid var(--clr--active);
+        border-left: 4px solid transparent;
+      }
+
+      li a:hover,
+      li a:focus {
+        border-top: 4px solid var(--clr--hover);
+        border-left: 4px solid transparent;
+      }
+     
+}
+/*END NAV STYLES*/
+
+/*------------------------------------------*/
+
+/*START HERO STYLES*/
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-color:var(--black);
+  color:var(--white);
+  overflow: hidden;
+  background: #C04848;  /*fallback for old browsers;*/
+  background: linear-gradient(rgba(0, 0, 0, 0.472), rgba(0, 0, 0, 0.915)), url("images/michael-w9MeSCK0imA-unsplash.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("images/michael-w9MeSCK0imA-unsplash.jpg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {height: 50vh;
+          width: auto;
+          padding-left: 20px;
+          padding-right: 20px;
+         
+        }
+  
+  .hero h1 {
+    font-size: 5rem;
+    line-height: 85px;
+    padding-bottom: 50px;
+  }
+
+  .hero p {font-size: 1.5rem;}
+}
+
+.hero h1 {
+  text-align: center;
+  margin-top: -150px;
+}
+
+.hero p {
+  text-align: center;
+  word-spacing: 5px;
+  font-weight: 200;
+}
+@keyframes bouncing {
+  0% {bottom: 0;}
+  50% {bottom: 20px;}
+  100% {bottom: 0;}
+}
+
+.arrow {
+  animation: bouncing 1s infinite ease-in-out;
+  bottom: 0;
+  display: block;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  position: absolute;
+  width: 50px;
+  margin-bottom: 100px;
+}
+
+@media only screen and (min-width: 600px) {
+  .brand img {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .brand img {
+    width: 20%;
+  }
+}
+
+
+/*END HERO STYLES*/
+
+/*------------------------------------------*/
+
+/*START WORK STYLES*/
+
+
+
+.work-header {
+  padding-top: 60px;
+  color: var(--black);
+  
+}
+
+.work-header h1 {
+  text-align: center;
+}
+
+.work-header p {
+  text-align: center;
+  word-spacing: 5px;
+  font-weight: 200;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+
+.container {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 50px;
+    height: 140vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    height: 140vh;
+    gap: 50px;
+  }
+
+  .work-header {
+    padding-bottom: 60px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    flex-direction: column;
+    height: 150vh;
+    gap: 50px;
+  }
+
+ .work-header {
+  padding-bottom: 60px;}
+
+  
+}
+
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: scale 150ms ease;
+  box-shadow: 0 0 10px #00000020;
+  user-select: none;
+  border-radius: 20px 20px 0 0;
+  
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+.card > div {
+  padding: 25px 138px;
+  
+  
+}
+
+.card-header {
+  background-color: var(--green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-header::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  rotate: 45deg;
+  background-color:var(--green);
+  position: absolute;
+  bottom: -7px;
+}
+
+.card-header p {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.card-body {
+  background-color:var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 240px !important;
+  background-image: url(images/300x500.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 10px 10px;
+
+}
+
+.card-1 > .card-header,
+.card-3 > .card-header {
+  background-color: var(--green);
+}
+
+.card-1 > .card-header::after,
+.card-3 > .card-header::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  rotate: 45deg;
+  background-color: var(--green);
+  position: absolute;
+  bottom: -7px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .card > div {
+    padding:25px 100px;
+  }
+
+  
+}
+
+@media screen and (max-width: 400px) {
+
+  .card > div {
+    padding:25px 100px;
+  }
+
+  
+}
+
+/*END WORK STYLES*/
+
+/*------------------------------------------*/
+
+/*START CONTACT STYLES*/
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+  height: 60vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.form {width: 400px;}
+
+.contact-container h1 {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.contact-container p {
+  color: var(--white);
+}
+
+.contact > form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 20vh;
+}
+
+.contact-header {
+  background-color: var(--black);
+  align-items: center;
+  }
+
+.form-control {width: 100%;}
+
+  .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+label {
+  color: var(--white);
+  font-weight: 200;
+  font-size: 1.5rem;
+}

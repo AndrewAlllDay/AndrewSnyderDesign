@@ -1,0 +1,37 @@
+<!--FOOTER START-->
+
+<div class="footer bg-dark text-light" id="">
+  <div class="container container-footer">
+    <div class="container d-flex flex-column justify-content-center align-items-center footer">
+      <h2 class="display-1 font-weight-light footer-header text-center">Let's work <span class="green">together.</span></h2>
+      <p class="footer-lead mb-4 pt-lg-4">Below are some ways to contact me:</p>
+    </div>
+    <div class="container d-flex flex-row justify-content-center align-items-center bg-dark">
+      <div class="row">
+        <div class="col m-5"><a href="mailto:andrew@andrewsnyderdesign.com"><i class="logo-item fa-solid fa-envelope fa-2xl"></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col m-5"><a href="https://www.linkedin.com/in/andrewsnyderdesign/"><i class="logo-item fa-brands fa-linkedin fa-2xl"></i></a>
+        </div>
+      </div>
+  </div>
+</div>      
+</footer>
+     
+<script>function randomImage(){
+  var images = [
+   'https://andrewsnyderdesign.com/images/Geometric%20Pattern%201.jpg',
+   'https://andrewsnyderdesign.com/images/Geometric%20Pattern%202.jpg',
+   'https://andrewsnyderdesign.com/images/Geometric%20Pattern%203.jpg'];
+  var size = images.length;
+  var x = Math.floor(size * Math.random());
+  console.log(x);
+  var element = document.getElementsByClassName('home-intro');
+  console.log(element);
+  element[0].style["background-image"] = "url("+ images[x] + ")";
+}
+
+document.addEventListener("DOMContentLoaded", randomImage);</script>
+
+<!--FOOTER END-->
